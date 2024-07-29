@@ -1,5 +1,7 @@
-h1 {
-  font-family: "Gotham";
-  color: var(--yellow);
-  font-weight: 700;
+.app__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+  width: 100%;
 }
