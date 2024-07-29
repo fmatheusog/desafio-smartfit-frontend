@@ -55,16 +55,34 @@
   .checkbox__wrapper {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin: 32px;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 32px 0;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .input__group {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
 
   .button__wrapper {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 10px;
     width: 100%;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
 
     .search__button {
       background-color: var(--green);
@@ -79,7 +97,11 @@
       border-radius: 5px;
       font-weight: bold;
       padding: 12px;
-      width: 25%;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: 25%;
+      }
     }
   }
 }
