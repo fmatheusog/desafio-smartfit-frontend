@@ -6,7 +6,12 @@
 
   <div class="form__item">
     <div class="input__group">
-      <input type="radio" name="hour" formControlName="hour" value="morning" />
+      <input
+        type="radio"
+        name="hour"
+        formControlName="hour"
+        value="06h às 12h"
+      />
       <label for="morning">Manhã</label>
     </div>
     <span>06:00 às 12:00</span>
@@ -18,7 +23,7 @@
         type="radio"
         name="hour"
         formControlName="hour"
-        value="afternoon"
+        value="12h às 18h"
       />
       <label for="afternoon">Tarde</label>
     </div>
@@ -27,7 +32,12 @@
 
   <div class="form__item">
     <div class="input__group">
-      <input type="radio" name="hour" formControlName="hour" value="night" />
+      <input
+        type="radio"
+        name="hour"
+        formControlName="hour"
+        value="18h às 23h"
+      />
       <label for="night">Noite</label>
     </div>
     <span>18:01 às 23:00</span>
@@ -40,7 +50,7 @@
     </div>
     <span>
       Resultados encontrados:
-      <strong>{{ results.length }}</strong>
+      <strong>{{ filteredResults.length }}</strong>
     </span>
   </div>
 
