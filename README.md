@@ -15,14 +15,14 @@ O objetivo desse projeto é aprofundar meus conhecimentos de Javascript/Typescri
 
 ## To-do list
 
-[x] Componente Header
-[x] Componente Form
-[x] Consumir arquivo JSON
-[x] Lógica dos filtros
-[ ] Componente Legend
-[ ] Componente UnitList
-[ ] Compartilhar lista de unidades entre os componentes
-[ ] Testes unitários
-[ ] Documentação
-[ ] Testes E2E
-[ ] Deploy
+- [x] Componente Header
+- [x] Componente Form
+- [x] Consumir arquivo JSON
+- [x] Lógica dos filtros
+- [ ] Componente Legend
+- [ ] Componente UnitList
+- [ ] Compartilhar lista de unidades entre os componentes
+- [ ] Testes unitários
+- [ ] Documentação
+- [ ] Testes E2E
+- [ ] Deploy
