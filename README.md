@@ -20,8 +20,8 @@ O objetivo desse projeto é aprofundar meus conhecimentos de Javascript/Typescri
 - [x] Consumir arquivo JSON
 - [x] Lógica dos filtros
 - [x] Componente Legend
-- [ ] Componente Card
-- [ ] Componente UnitList
+- [x] Componente Card
+- [x] Componente UnitList
 - [x] Compartilhar lista de unidades entre os componentes
 - [ ] Testes unitários
 - [ ] Documentação
