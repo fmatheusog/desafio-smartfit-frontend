@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { UnitsService } from '../../services/units.service';
@@ -11,6 +11,8 @@ import { FilterUnitsService } from '../../services/filter-units.service';
   styleUrl: './form.component.scss',
 })
 export class FormComponent implements OnInit {
+  @Output() submitEvent = new EventEmitter();
+  @Output() clearEvent = new EventEmitter();
   results: Location[] = [];
   filteredResults: Location[] = [];
   formGroup!: FormGroup;
@@ -38,6 +40,8 @@ export class FormComponent implements OnInit {
 
     this.filteredResults = this.filterUnitsService.filterUnits(this.results, showClosed, hour);
     this.unitsService.setFilteredUnits(this.filteredResults);
+
+    this.submitEvent.emit();
   }
 
   onClean(): void {
@@ -51,5 +55,7 @@ export class FormComponent implements OnInit {
       this.filteredResults = response;
     });
     this.unitsService.setFilteredUnits(this.filteredResults);
+
+    this.clearEvent.emit();
   }
 }

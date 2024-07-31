@@ -1,5 +1,6 @@
 <main class="app__container">
   <app-header />
-  <app-form />
+  <app-form (submitEvent)="onSubmit()" (clearEvent)="onClear()" />
   <app-legend />
+  <app-unit-list *ngIf="(showlist | async)" [unitsLits]="unitsList" />
 </main>
