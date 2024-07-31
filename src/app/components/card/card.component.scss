@@ -1,0 +1,61 @@
+.card {
+  background-color: var(--light-background);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    height: 100%;
+  }
+
+  span {
+    color: var(--red);
+    font-weight: 600;
+  }
+
+  .opened {
+    color: var(--green);
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .divider {
+    background-color: var(--light-text);
+    height: 2px;
+    width: 100%;
+  }
+
+  .icons__container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+
+    img {
+      height: 64px;
+    }
+  }
+
+  .schedules__container {
+    display: grid;
+    row-gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      list-style: none;
+    }
+  }
+}
