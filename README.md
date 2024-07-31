@@ -19,9 +19,10 @@ O objetivo desse projeto é aprofundar meus conhecimentos de Javascript/Typescri
 - [x] Componente Form
 - [x] Consumir arquivo JSON
 - [x] Lógica dos filtros
-- [ ] Componente Legend
+- [x] Componente Legend
+- [ ] Componente Card
 - [ ] Componente UnitList
-- [ ] Compartilhar lista de unidades entre os componentes
+- [x] Compartilhar lista de unidades entre os componentes
 - [ ] Testes unitários
 - [ ] Documentação
 - [ ] Testes E2E
