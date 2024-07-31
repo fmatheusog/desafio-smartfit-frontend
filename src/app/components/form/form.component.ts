@@ -28,17 +28,16 @@ export class FormComponent implements OnInit {
     });
 
     this.unitsService.getAllUnits().subscribe((response) => {
-      this.results = response.locations;
-      this.filteredResults = this.results;
+      this.results = response;
+      this.filteredResults = response;
     });
   }
 
   onSubmit(): void {
-    this.filteredResults = this.filterUnitsService.filterUnits(
-      this.results,
-      this.formGroup.value.showClosed,
-      this.formGroup.value.hour
-    );
+    const { showClosed, hour } = this.formGroup.value;
+
+    this.filteredResults = this.filterUnitsService.filterUnits(this.results, showClosed, hour);
+    this.unitsService.setFilteredUnits(this.filteredResults);
   }
 
   onClean(): void {
@@ -47,6 +46,10 @@ export class FormComponent implements OnInit {
       showClosed: true,
     });
 
-    this.filteredResults = this.results;
+    this.unitsService.getAllUnits().subscribe((response) => {
+      this.results = response;
+      this.filteredResults = response;
+    });
+    this.unitsService.setFilteredUnits(this.filteredResults);
   }
 }
